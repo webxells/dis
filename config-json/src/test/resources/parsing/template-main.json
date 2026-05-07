@@ -1,0 +1,9 @@
+{
+  
+  
+  "template1": ["array","array"],
+  "template1-2": ["array","array"],
+  "template2": {"some-var":"variable","other":"parameter-value"},
+  
+  "template2-2": {"some-var":"variable2","other":"parameter-value2"}
+}

@@ -1,0 +1,42 @@
+{
+'--dis-var': {
+    "variable1": "first",
+    "bool": false,
+    "var1": 2.0,
+    "var2": 8.5,
+    "math": '--dis-add(--dis-var("var1"), --dis-var("var2"))'
+  },
+  "math": '--dis-round(--dis-var("math"))',
+'--dis-if': {
+    "if": '--isset("variable1", "bool")',
+    "then": {
+      "resultIsset": "true"
+    },
+    "else": {
+      "resultIsset": "false"
+    }
+  },
+'--dis-if': {
+    "if": '--isset("variable1", "bool", "unknown")',
+    "then": {
+      "resultIsset": "true"
+    },
+    "else": {
+      "resultIsset": "false"
+    }
+  },
+  "foo": {
+    "bar": {
+      "bump": '--dis-var("variable1")',
+      '--dis-include("include-main")'
+    }
+  },
+'--dis-include("outsorced-variable")',
+  "array": [ '--dis-include("include-main")', '--dis-var("variable1")' ],
+'--dis-if': {
+    "if": '--dis-var("bool")',
+    "else": {
+      "moep": "test"
+    }
+  }
+}

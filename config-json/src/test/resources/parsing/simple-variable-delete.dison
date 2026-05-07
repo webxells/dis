@@ -1,0 +1,10 @@
+[
+'--dis-var({"test": true})',
+  '--dis-if({"if": --isset("test"), "then": true, "else": false})',
+'--dis-var-delete("test")',
+  '--dis-if({"if": --isset("test"), "then": true, "else": false})',
+'--dis-var({"test": true})',
+  '--dis-if({"if": --isset("test"), "then": true, "else": false})',
+'--dis-var-delete(["test"])',
+  '--dis-if({"if": --isset("test"), "then": true, "else": false})'
+]

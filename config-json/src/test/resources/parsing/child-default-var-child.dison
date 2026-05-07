@@ -1,0 +1,6 @@
+{
+  '--dis-var-default': {
+    "var2": '--dis-var("var1")'
+  },
+  "test": '--dis-var("var2")'
+}

@@ -1,0 +1,47 @@
+/**
+ * Copyright (C) 2020-2026 webXells GmbH
+ *
+ * This work is licensed under the Creative Commons
+ * Attribution-NonCommercial-NoDerivatives 4.0 International Public License.
+ *
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    https://creativecommons.org/licenses/by-nc-nd/4.0/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ **/
+package com.webxells.dis.base.manipulator.setter;
+
+import com.webxells.dis.api.DatasetPiece;
+import com.webxells.dis.api.MappingPortrayal;
+import com.webxells.dis.api.config.MappingPart;
+import com.webxells.dis.api.config.description.Description;
+import com.webxells.dis.base.SimpleDatasetPiece;
+
+@Description("Sets value to that of another mapping part")
+public class FieldSetter implements OverruleSetter {
+    @Description("Mapping part with the new value")
+    private MappingPortrayal portrayal;
+
+    @Override
+    public String getValue(final DatasetPiece mappingDatasetPiece, final MappingPart mappingPart) {
+        mappingPart.getDataset().clear();
+        mappingPart.getConfiguration().getByPortrayal(portrayal).stream()
+                .flatMap(a -> a.getDataset().getContent().stream())
+                .flatMap(a -> a.value().stream())
+                .forEach(a -> mappingPart.getDataset().collect(new SimpleDatasetPiece(a)));
+        return null;
+    }
+
+    @Override
+    public String getType() {
+        return FieldSetter.class.getName();
+    }
+
+    public void setPortrayal(final MappingPortrayal portrayal) {
+        this.portrayal = portrayal;
+    }
+}

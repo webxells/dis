@@ -1,0 +1,5 @@
+{
+  "file1" : '--dis-include("some-dir/require-file1")',
+  "array": ['--dis-include("some-dir/and-some-more/require-file2")'],
+  '--dis-include("include-file3")'
+}

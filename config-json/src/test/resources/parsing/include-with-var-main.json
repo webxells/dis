@@ -1,0 +1,15 @@
+{
+
+  "var1": "variable1",
+  "var2": "new value for 2",
+  "var3": "variable3",
+  "var4": [0,1,2,3],
+  "var5": {"test":"moep"},
+  "file1" : "aloha",
+  "array": [123],
+  "key": "value",
+  "key2": "value2",
+  "array2": [0,1,2,3],
+  "object": {"test":"moep"}
+
+}

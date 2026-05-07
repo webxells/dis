@@ -1,0 +1,19 @@
+{
+  '--dis-var': {
+    "var": "variable"
+  },
+  '--dis-template': {
+    "template1": ["array", "array"],
+    "template2": {
+      "some-var": '--dis-var("var")',
+      "other": '--dis-var("parameter")'
+    }
+  },
+  "template1": '--dis-template("template1")',
+  "template1-2": '--dis-template("template1")',
+  "template2": '--dis-template("template2", {"parameter": "parameter-value"})',
+  '--dis-var': {
+    "var": "variable2"
+  },
+  "template2-2": '--dis-template("template2", {"parameter": "parameter-value2"})'
+}

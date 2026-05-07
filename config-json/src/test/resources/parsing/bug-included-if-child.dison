@@ -1,0 +1,21 @@
+{
+  '--dis-if': {
+    "if": '--dis-var("nuts3-field-already-created")',
+    "then": {
+      "output": {
+        "reference": "dev/null",
+        "path": "nuts3"
+      },
+      "refinements": [
+        '--dis-var-default': {
+          "field-coordinates": "center"
+        },
+        {
+          "type": "com.webxells.dis.json.refinement.JsonType",
+          "jsonType": "ARRAY_TO_MULTIPLE_DATASET_PIECES"
+        }
+      ],
+      "operations": [ ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "system": {
+    "type": "com.webxells.dis.test.example.workflow.TestSupplier"
+  },
+  "configurations": [
+    {
+      "name": "config-1",
+      "type": "com.webxells.dis.base.config.SimpleJobConfig",
+      "trigger": [{}],
+      "input": null,
+      "output": [],
+      "mapping": {
+        "parts": []
+      }
+    }
+  ]
+}

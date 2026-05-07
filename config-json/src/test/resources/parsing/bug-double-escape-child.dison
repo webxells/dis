@@ -1,0 +1,7 @@
+
+{
+    "outputConfig": {
+      "type": "com.webxells.dis.plain.output.Echo",
+      "template": '--dis-var("{\"query\":\"$graph-query\"}")'
+    }
+  }

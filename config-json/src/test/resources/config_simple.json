@@ -1,0 +1,73 @@
+{
+  "system": {
+    "type": "com.webxells.dis.test.example.workflow.TestSupplier",
+    "someBoolean": true,
+    "someString": "abc"
+  },
+  "configurations": [
+    {
+      "name": "config-1",
+      "type": "com.webxells.dis.base.config.SimpleJobConfig",
+      "trigger": [{
+        "type": "com.webxells.dis.test.example.trigger.TestTrigger",
+        "testField": "testValue",
+        "not-existent-field": "my non-existence makes me strong"
+      }],
+      "input": {
+        "name": "input-1",
+        "type": "com.webxells.dis.test.example.input.TestInput",
+        "testInputField": "testInputValue",
+        "not-existent-field": "my non-existence makes me strong"
+      },
+      "output": [{
+        "name": "output-1",
+        "type": "com.webxells.dis.test.example.output.TestOutput",
+        "testOutputField": "testOutputValue",
+        "not-existent-field": "my non-existence makes me strong",
+        "mappingPortrayal": {
+          "source": "OUTPUT",
+          "reference": "ref2",
+          "path": "path3"
+        }
+      }],
+      "mapping": {
+        "parts": [
+          {
+            "input": {
+              "reference": "input-1",
+              "path": "some.thing>over.there",
+              "type": "com.webxells.dis.test.example.mapping.TestMappingPoint",
+              "test": "someWeirdValue"
+            },
+            "type": "com.webxells.dis.test.example.mapping.TestMappingPart",
+            "test": "someWeirdValue",
+            "output": {
+              "reference": "output-1",
+              "path": "path.to.hell"
+            },
+            "operations": [
+              {
+                "type": "com.webxells.dis.test.example.validator.TestValidator",
+                "parameter": "validator"
+              }
+            ],
+            "subData": [{
+              "parts": [{
+                "input": {
+                  "reference": "input-1-sub",
+                  "path": "some.thing[new]>over.there"
+                },
+                "output": {
+                  "reference": "output-1-sub",
+                  "path": "path.to.frozen.hell"
+                }
+              }]
+            }],
+            "validatorErrorStrategy": "ERROR",
+            "multiToSingleSelectStrategy": "LAST"
+          }
+        ]
+      }
+    }
+  ]
+}

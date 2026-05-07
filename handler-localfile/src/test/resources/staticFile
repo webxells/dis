@@ -1,0 +1,3 @@
+Cookies are a way to add state to HTTP, which by design is a stateless protocol. However, with Cookies, the server can associate multiple requests to the same session.
+
+Cookies are, from a technical standpoint, just HTTP headers: Cookie (request) and Set-Cookie (response). However, they are treated specially by the browsers. When a server wants to set a cookie, he adds the Set-Cookie header to the response. The client reads the value of this header and sends it in the Cookie header with each consecutive request back to the server.

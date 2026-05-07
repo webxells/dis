@@ -1,0 +1,9 @@
+{
+'--dis-template': {
+    "template1": {
+      "test": '--dis-var("current")',
+      "extra": '--dis-var("var")'
+    }
+  },
+  '--dis-foreach-template(["var1", "var2", "var3", "var4"], "template1", {"var": --dis-if({"if":--empty(""), "then":"extra"})})'
+}

@@ -1,0 +1,42 @@
+{
+  '--dis-if': {
+    "if": '--dis-var("variable2")',
+    "then": {
+      "var1": '--dis-var("test $variable1")',
+      "var2": false,
+      "var3": true
+    },
+    "else": {
+      "var1": "none",
+      "var2": true,
+      "var3": false
+    }
+  },
+  '--dis-if': {
+    "if": '--and(true, --dis-var("variable2"))',
+    "then": {
+      "resultThen": "true && variable2 => true"
+    },
+    "else": {
+      "resultElse": "true && variable2 => false"
+    }
+  },
+  '--dis-if': {
+    "if": '--or(false, --dis-var("variable2"))',
+    "then": {
+      "resultThen": "false || variable2 => true"
+    },
+    "else": {
+      "resultElse": "false || variable2 => false"
+    }
+  },
+  '--dis-if': {
+    "if": '--not(--or(false, --dis-var("variable2")))',
+    "then": {
+      "resultThen": "!(false || variable2) => true"
+    },
+    "else": {
+      "resultElse": "!(false || variable2) => false"
+    }
+  }
+}

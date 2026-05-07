@@ -1,0 +1,8 @@
+[
+  {
+    "outputConfig": {
+      "type": "com.webxells.dis.plain.output.Echo",
+      "template": "{\"query\":\"{ poi(limit:-1,filter:{id:{_in:[$ids]}}) { id,search_index_enhancement{id, translation {languages_code{code}, index}},status,source,import_tag,import_unique_id,data,contact {contact_id {value,title,type}},video {video_id{id,title,copyright,video{filename_disk},poster{filename_disk}}},image_gallery{image_gallery_id{id,name,images{directus_files_id{filename_disk}}}},person{person_id{last_name,first_name,degree}},gui_config, systems { system_id { id } }, translation { description,name, languages_code { code } } location_id { postal_code, street, house_number, city, center, coordinates } category { category_id { id,parent_id {id,parent_id {id,parent_id {id,parent_id {id,parent_id {id,parent_id {id,parent_id {id}}}}}}},alias, translation { name,languages_code { code } } } }}}\"}"
+    }
+  }
+]

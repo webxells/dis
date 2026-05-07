@@ -1,0 +1,8 @@
+[
+  //test
+
+  '--dis-include-as-children("include-as-children-part1")',
+  '--dis-include-as-children("include-as-children-part2.json")',
+  '--dis-include-as-children("include-as-children-part3")',
+  '--dis-include("some-dir/and-some-more/require-relative")'
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "output":{"reference":"dev/null","path":"nuts3"},"refinements":[{"type":"com.webxells.dis.json.refinement.JsonType","jsonType":"ARRAY_TO_MULTIPLE_DATASET_PIECES"}],"operations":[]
+,"dison-source-mapping=test":"bug-included-if-child.dison@1:1"
+  ,"dison-source-mapping=test":"[root]@2:3"},
+  {
+
+  },
+  {
+  "output":{"reference":"dev/null","path":"nuts3"},"refinements":[{"type":"com.webxells.dis.json.refinement.JsonType","jsonType":"ARRAY_TO_MULTIPLE_DATASET_PIECES"}],"operations":[]
+,"dison-source-mapping=test":"bug-included-if-child.dison@1:1"}
+
+]

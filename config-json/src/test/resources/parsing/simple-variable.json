@@ -1,0 +1,40 @@
+{
+
+  "foo": {
+    "bar": {
+      "bump": "unknown",
+      "bumpDefault": "default",
+      "bumpDefaultMethod": "var2",
+      "bamp": "recursiveCall",
+      "baz": "var1",
+      "double": 1.2323,
+      "recursiveDouble": 1.2323,
+      "null": null,
+      "array-bitch": ["asd","ert"],
+      "more": "recursiveCall"
+    }
+  },"foo2": {
+    "bar": {
+      "baz": "var2",
+      "baz2": "var2"
+    }},
+
+
+  "foo3": {
+    "bar": {
+      "baz": "new var1",
+      "bam": "var2",
+      "biz": "var2extended"
+    }
+  },
+  "f//oo4": {
+    "bar": {
+
+      "//asd": "//asd",
+      "baz": "new var2"
+    }
+  },
+  "array": [
+    "test new var1 sasa", "new var2}",  "new var1"]
+
+}

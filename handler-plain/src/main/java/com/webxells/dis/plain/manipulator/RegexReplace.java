@@ -1,0 +1,67 @@
+/**
+ * Copyright (C) 2020-2026 webXells GmbH
+ *
+ * This work is licensed under the Creative Commons
+ * Attribution-NonCommercial-NoDerivatives 4.0 International Public License.
+ *
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    https://creativecommons.org/licenses/by-nc-nd/4.0/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ **/
+package com.webxells.dis.plain.manipulator;
+
+import com.webxells.dis.api.MappingPortrayal;
+import com.webxells.dis.api.config.MappingPart;
+import com.webxells.dis.api.config.description.Description;
+import com.webxells.dis.api.config.description.Required;
+import com.webxells.dis.api.error.InvalidApi;
+import com.webxells.dis.plain.intern.RegexManipulation;
+import java.util.Objects;
+import java.util.regex.Matcher;
+
+@Description("Replaces text that matches regex with given value")
+public class RegexReplace extends RegexManipulation {
+    @Required(xor = "replaceByMappingPortrayal")
+    @Description("Value to replace with")
+    private String replace;
+    @Required(xor = "replace")
+    @Description("Mapping part that holds the replacement value")
+    private MappingPortrayal replaceByMappingPortrayal;
+
+    @Override
+    public void validate() throws InvalidApi {
+        super.validate();
+        if (null == replace && null == replaceByMappingPortrayal) {
+            throw new InvalidApi("replace or replaceByMappingPortrayal required");
+        }
+    }
+
+    @Override
+    protected String compileResult(final String original, final Matcher matcher, final MappingPart part) {
+        final String replaceString = Objects.requireNonNullElseGet(replace,
+                () -> part.getConfiguration().getByPortrayal(replaceByMappingPortrayal)
+                    .flatMap(MappingPart::value).orElse(""));
+
+        switch (replaceType) {
+            case ALL:
+                return matcher.replaceAll(replaceString);
+            case FIRST:
+                return matcher.replaceFirst(replaceString);
+        }
+        throw new RuntimeException("Invalid regex expression type: " + replaceType);
+    }
+
+
+    public void setReplace(final String replace) {
+        this.replace = replace;
+    }
+
+    public void setReplaceByMappingPortrayal(final MappingPortrayal replaceByMappingPortrayal) {
+        this.replaceByMappingPortrayal = replaceByMappingPortrayal;
+    }
+}

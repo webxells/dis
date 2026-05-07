@@ -1,0 +1,72 @@
+{
+  "system": {
+    "type": "com.webxells.dis.test.example.workflow.TestSupplier",
+    "someString": "ert"
+  },
+  "configurations": [
+    {
+      "name": "config-1",
+      "type": "com.webxells.dis.base.config.SimpleJobConfig",
+      "trigger": [],
+      "input": {
+        "name": "input-1",
+        "type": "com.webxells.dis.test.example.input.TestInput",
+        "stringMap": {
+          "testa": "testa-value",
+          "testb": "testb-value"
+        },
+        "stringObjectMap": {
+          "testa": {
+            "type": "com.webxells.dis.test.example.input.NestedTestClassA"
+          },
+          "testb": {
+            "type": "com.webxells.dis.test.example.input.NestedTestClassB"
+          }
+        },
+        "stringIntMap": {
+          "testa": 12,
+          "testb": 5
+        },
+        "stringBooleanMap": {
+          "testa": true,
+          "testb": false,
+          "testc": null
+        },
+        "stringListStringMap": {
+          "testa": [
+            "a", "b"
+          ],
+          "testb": [
+            "c", "d"
+          ]
+        },
+        "stringListObjectMap": {
+          "testa": [
+            {
+              "type": "com.webxells.dis.test.example.input.NestedTestClassB"
+            },
+            {
+              "type": "com.webxells.dis.test.example.input.NestedTestClassA",
+              "stringList": [
+                "a", "b"
+              ]
+            }
+          ],
+          "testb": [
+            {
+              "type": "com.webxells.dis.test.example.input.NestedTestClassA"
+            },
+            {
+              "type": "com.webxells.dis.test.example.input.NestedTestClassB"
+            }
+          ]
+        },
+        "not-existent-field": "my non-existence makes me strong"
+      },
+      "output": [],
+      "mapping": {
+        "parts": []
+      }
+    }
+  ]
+}

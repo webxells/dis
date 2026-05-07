@@ -1,0 +1,23 @@
+{
+
+  "math": 11,
+"resultIsset":"true",
+"resultIsset":"false",
+  "foo": {
+    "bar": {
+      "bump": "first",
+      "file1" : "aloha",
+  "array": [123],
+  "key": "value",
+  "key2": "value2"
+    }
+  },
+
+  "array": [ {
+  "file1" : "aloha",
+  "array": [123],
+  "key": "value",
+  "key2": "value2"
+}, "second" ],
+"moep":"test"
+}

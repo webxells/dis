@@ -1,0 +1,5 @@
+[
+  '--dis-include("child-default-var-child", {"var1":"a", "var2":"b"})',
+  '--dis-include("child-default-var-child", {"var1":"c"})',
+  '--dis-include("child-default-var-child", {"var1":"d"})'
+]

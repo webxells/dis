@@ -1,0 +1,29 @@
+{
+  "system": {
+    "type": "com.webxells.dis.test.example.workflow.TestSupplier",
+    "someBoolean": true,
+    "someString": "abc"
+  },
+  "configurations": [
+    {
+      "name": "config-1",
+      "type": "com.webxells.dis.base.config.SimpleJobConfig",
+      "mapping": {
+        "parts": [
+          {
+            "operations": [
+              {
+                "type": "com.webxells.dis.test.example.validator.TestValidator",
+                "complicated": [
+                  {
+                    "test": ["val1", "val2"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

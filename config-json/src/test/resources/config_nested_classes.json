@@ -1,0 +1,50 @@
+{
+  "system": {
+    "type": "com.webxells.dis.test.example.workflow.TestSupplier",
+    "someBoolean": false
+  },
+  "configurations": [
+    {
+      "name": "config-1",
+      "type": "com.webxells.dis.base.config.SimpleJobConfig",
+      "trigger": [{
+        "type": "com.webxells.dis.test.example.trigger.TestTrigger",
+        "testField": "testValue",
+        "not-existent-field": "my non-existence makes me strong"
+      }],
+      "input": {
+        "name": "input-1",
+        "type": "com.webxells.dis.test.example.input.TestInput",
+        "testInputField": "testInputValue",
+        "nestedImplementations": [{
+          "type": "com.webxells.dis.test.example.input.NestedTestClassA"
+        }, {
+          "type": "com.webxells.dis.test.example.input.NestedTestClassA"
+        }, {
+          "type": "com.webxells.dis.test.example.input.NestedTestClassB"
+        }],
+        "not-existent-field": "my non-existence makes me strong"
+      },
+      "output": [{
+        "name": "output-1",
+        "type": "com.webxells.dis.test.example.output.TestOutput",
+        "testOutputField": "testOutputValue",
+        "not-existent-field": "my non-existence makes me strong"
+      }],
+      "mapping": {
+        "parts":[
+          {
+            "input": {
+              "reference": "input-1",
+              "path": "some.thing>over.there"
+            },
+            "output": {
+              "reference": "output-1",
+              "path": "path.to.hell"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

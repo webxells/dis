@@ -1,0 +1,34 @@
+{
+  "simple-string": "porower",
+  "a": {
+    "n1": "single",
+    "multi": [{
+      "n2": "1single-sub",
+      "multi": [{
+        "end": 11
+      }, {
+        "end": 12
+      }, {
+        "end": 13
+      }]
+    }, {
+      "n2": "2single-sub",
+      "multi": [{
+        "end": 21
+      }, {
+        "end": 22
+      }, {
+        "end": 23
+      }]
+    }, {
+      "n2": "3single-sub",
+      "multi": [{
+        "end": 31
+      }, {
+        "end": 32
+      }, {
+        "end": 33
+      }]
+    }]
+  }
+}

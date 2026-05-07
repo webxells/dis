@@ -1,0 +1,48 @@
+/**
+ * Copyright (C) 2020-2026 webXells GmbH
+ *
+ * This work is licensed under the Creative Commons
+ * Attribution-NonCommercial-NoDerivatives 4.0 International Public License.
+ *
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    https://creativecommons.org/licenses/by-nc-nd/4.0/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ **/
+package com.webxells.dis.test.example.workflow;
+
+import com.webxells.dis.api.config.DisConfig;
+import com.webxells.dis.api.workflow.SystemSupplier;
+
+public class TestSupplier implements SystemSupplier<TestWorkflow> {
+    private boolean someBoolean;
+    private String someString;
+
+    @Override
+    public TestWorkflow get(final DisConfig configuration) {
+        final TestWorkflow workflow = new TestWorkflow();
+        workflow.setSomeBoolean(someBoolean);
+        workflow.setSomeString(someString);
+        return workflow;
+    }
+
+    public boolean isSomeBoolean() {
+        return someBoolean;
+    }
+
+    public void setSomeBoolean(final boolean someBoolean) {
+        this.someBoolean = someBoolean;
+    }
+
+    public String getSomeString() {
+        return someString;
+    }
+
+    public void setSomeString(final String someString) {
+        this.someString = someString;
+    }
+}

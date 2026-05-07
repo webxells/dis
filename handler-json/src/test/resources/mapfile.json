@@ -1,0 +1,8 @@
+{
+  "simple-key":"simple-value",
+  "map1": {
+    "map-title1": "map-value1",
+    "map-title2": "map-value2",
+    "map-title3": "map-value3"
+  }
+}

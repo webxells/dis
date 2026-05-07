@@ -1,0 +1,25 @@
+{
+'--dis-var': {
+    "force-brandenburg": true,
+    "create-nuts2": false
+  },
+  "output": {
+    "reference": "dev/null",
+    "path": "nuts2"
+  },
+  '--dis-if': {
+    "if": '--or(--dis-var("create-nuts2"), --dis-var("force-brandenburg"))',
+    "then": {
+      "operations": [
+        '--dis-var': {
+          "narf": "hihi"
+        },
+        {
+          "test": "moah"
+        },
+        //check if nuts2 starting with DE4 for brandenburg
+        '--dis-if({"if": --dis-var("force-brandenburg"),"then": { "type": "com.webxells.dis.plain.validator.StartsWith","fail": "coordinates not in brandenburg","value": "DE4"}})'
+      ]
+    }
+  }
+}

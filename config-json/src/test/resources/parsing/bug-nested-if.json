@@ -1,0 +1,8 @@
+{
+
+  "output": {
+    "reference": "dev/null",
+    "path": "nuts2"
+  },
+  "operations":[{"test":"moah"},{"type":"com.webxells.dis.plain.validator.StartsWith","fail":"coordinates not in brandenburg","value":"DE4"}]
+}

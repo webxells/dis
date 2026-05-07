@@ -1,0 +1,4 @@
+<root>
+    <a><child>first-child</child></a>
+    <b><child>second-child</child></b>
+</root>

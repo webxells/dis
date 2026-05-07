@@ -1,0 +1,12 @@
+{
+'--dis-template': {
+    "object": {
+      "someField": "x",
+      "anotherFiled": "y"
+    },
+    "template": {
+      "object": '--dis-template("object")'
+    }
+  },
+  "someTemplate": '--dis-template("template")'
+}

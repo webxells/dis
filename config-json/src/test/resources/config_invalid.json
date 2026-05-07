@@ -1,0 +1,38 @@
+{
+  "system": {
+    "type": "com.webxells.dis.test.example.workflow.TestSupplier"
+  },
+  "configurations": [
+    {
+      "name": "config-1",
+      "type": "com.webxells.dis.base.config.SimpleJobConfig",
+      "trigger": [],
+      "input": {
+        "name": "input-1",
+        "type": "com.webxells.dis.test.example.input.TestInput"
+      },
+      "output": [],
+      "mapping": {
+        "parts": [
+          {
+            "input": {
+              "reference": "input-1",
+              "path": "some.thing>over.there",
+              "type": "com.webxells.dis.test.example.mapping.TestMappingPoint",
+              "test": "someWeirdValue"
+            },
+            "output": {
+              "reference": "output-1",
+              "path": "path.to.hell"
+            },
+            "operations": [
+              {
+                "type": "com.webxells.dis.test.example.validator.Invalidator"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

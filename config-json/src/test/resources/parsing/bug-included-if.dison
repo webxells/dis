@@ -1,0 +1,10 @@
+[
+  {
+    '--dis-include("bug-included-if-child", {"nuts3-field-already-created": true})'
+  },
+  {
+'--dis-include("bug-included-if-child", {"nuts3-field-already-created": false})'
+  },
+  '--dis-include("bug-included-if-child", {"nuts3-field-already-created": true})',
+'--dis-include("bug-included-if-child", {"nuts3-field-already-created": false})'
+]

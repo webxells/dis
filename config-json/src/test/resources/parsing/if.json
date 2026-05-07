@@ -1,0 +1,19 @@
+{
+
+  "var1":"test var1","var2":false,"var3":true,
+  "resultThen":"true && variable2 => true",
+  "resultThen":"false || variable2 => true",
+  "resultElse":"!(false || variable2) => false",
+  "true": {
+  "var1":"test var1","var2":false,"var3":true,
+  "resultThen":"true && variable2 => true",
+  "resultThen":"false || variable2 => true",
+  "resultElse":"!(false || variable2) => false"
+},
+  "false": {
+  "var1":"none","var2":true,"var3":false,
+  "resultElse":"true && variable2 => false",
+  "resultElse":"false || variable2 => false",
+  "resultThen":"!(false || variable2) => true"
+}
+}

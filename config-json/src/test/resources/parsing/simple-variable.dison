@@ -1,0 +1,71 @@
+{
+'--dis-var': {
+    "variable1": "var1",
+    "variable2": "var2",
+    "var1": "recursiveCall",
+    "compile": '--dis-var("$var1")',
+    "double": 1.2323,
+    "array-bitch": ["asd", "ert"],
+    "recursiveDoubleName": "double",
+    "null": null
+  },
+  "foo": {
+    "bar": {
+      "bump": '--dis-var("unknown")',
+      "bumpDefault": '--dis-var-default("unknown", "default")',
+      "bumpDefaultMethod": '--dis-var-default("unknown", --dis-var-default("$variable2", "not-shown"))',
+      "bamp": '--dis-var("compile")',
+      "baz": '--dis-var("variable1")',
+      "double": '--dis-var("double")',
+      "recursiveDouble": '--dis-var("recursiveDoubleName", true)',
+      "null": '--dis-var("null")',
+      "array-bitch": '--dis-var("array-bitch")',
+      "more": '--dis-var("$$variable1", true)'
+    }
+  },//this should not be visible in json file " \ äöäsad '--dis-var("moep")'
+  "foo2": {
+    "bar": {
+      "baz": '--dis-var("variable2")',
+      "baz2": '--dis-var-default("variable2", "not-shown")'
+    }/*
+    lalala */
+  //this should not be visible in json file " \ äöäsad '--dis-var("moep")'
+    // second row comment
+  },
+'--dis-var': {
+    //test
+    "variable1": "new var1",
+    "variable2extended": '--dis-var("${variable2}extended")'
+  },
+'--dis-var-default': {
+    //test
+    "variable1": "new new var1",
+    "unknown": '--dis-var("${variable2}")'
+  },
+  "foo3": {
+    "bar": {
+      "baz": '--dis-var("variable1")',
+      "bam": '--dis-var("unknown")',
+      "biz": '--dis-var("variable2extended")'
+    }
+  },
+  "f//oo4": {
+    "bar": {
+'--dis-var': {
+        "variable2": "new var2"//test
+      },
+      "//asd": "//asd",
+      "baz": '--dis-var("variable2")'
+    }
+  },
+  "array": [
+    //test
+    // second row comment
+    '--dis-var("test $variable1 sasa")', //some comment
+    '--dis-var("${variable2}}")',  '--dis-var("variable1")'],
+'--dis-var': {
+    //test
+    "variable1": "new var1",
+    "variable2extended": '--dis-var("${variable2}extended")'
+  }
+}

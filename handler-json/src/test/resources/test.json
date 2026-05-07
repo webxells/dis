@@ -1,0 +1,20 @@
+{
+  "simple-string": "porower",
+  "a": {
+    "b": {
+      "c": [{
+        "n1": 123,
+        "b1": true,
+        "s1": "fd\\\\\"iväö"
+      }, {
+        "n1": 456.234,
+        "b1": false,
+        "s1": "wertz",
+        "first": "only in second"
+      }, {
+      }, {
+      }],
+      "d": [{"f": "fosald"}, {}, {"a":"jknsff"}]
+    }
+  }
+}

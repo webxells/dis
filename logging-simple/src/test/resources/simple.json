@@ -1,0 +1,40 @@
+{
+  "defaultLevel": "WARN",
+  "defaultPattern": "$thread - $date(pattern: YYYY-mm-dd HH:MM:ss): $msg",
+  "defaultExceptions": {
+    "EXCEPTION": "FATAL",
+    "EXCEPTION2": "TRACE"
+  },
+  "appenders": [
+    {
+      "type": "FILE",
+      "path": "/tmp/error.log",
+      "level": "ERROR",
+      "exceptions": {
+        "EXCEPTION": "INFO"
+      },
+      "append": true,
+      "pattern": "$thread - $date(pattern: YYYY-mm-dd HH:MM:ss): $msg(limit:200, intelligentTabs:true, replaceSpaces:true)",
+      "rollingStrategy": {
+        "patternName": "$name$rollingIndex$date",
+        "gzip": true,
+        "maxFiles": 20,
+        "triggers": [
+          {
+            "type": "SIZE",
+            "value": 20000,
+            "unit": "KB"
+          },
+          {
+            "type": "AGE",
+            "value": 5,
+            "unit": "DAY"
+          }
+        ]
+      }
+    },
+    {
+      "type": "SYSTEM"
+    }
+  ]
+}

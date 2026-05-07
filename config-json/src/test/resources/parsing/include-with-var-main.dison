@@ -1,0 +1,15 @@
+{
+'--dis-var': {
+  	"var1":"variable1",
+  	"var2":"variable2",
+    "file-to-include": "include-main",
+    "array": [0,1,2,3],
+    "object": {"test": "moep"},
+  },
+  '--dis-include("include-with-var-sub", {"var2":"new value for 2", "var3":"variable3",
+                                          "var4": --dis-var("array"), "var5": --dis-var("object")})',
+  '--dis-include(--dis-var("$file-to-include.json"))',
+  "array2": '--dis-var("array")',
+  "object": '--dis-var("object")'
+
+}

@@ -1,0 +1,8 @@
+{
+'--dis-var': {
+    "variable1": "var1"
+  },
+  '--dis-include("if-handling", {"variable2": true})',
+  "true": '--dis-include("if-handling", {"variable2": true})',
+  "false": '--dis-include("if-handling", {"variable2": false})'
+}
