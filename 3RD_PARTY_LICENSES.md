@@ -510,16 +510,16 @@ Following software are using [EPSG Geodetic Parameter Dataset Terms of Use](http
 >
 > ## Table 1: permitted modifications of data
 >
-> | AS GIVEN IN EPSG DATASET || PERMITTED CHANGE FOR VENDORS/USERS TO ADOPT |
-> |-||-|
-> | *Change of ellipsoid defining parameters.* |||
-> | 1a | Ellipsoid parameters a and b. | a and 1/f ; a and f; a and e; a and e2. |
-> | 1b | Ellipsoid parameters a and 1/f. | a and b; a and f; a and e; a and e2. |
-> | *Change of projection method* |||
+> | AS GIVEN IN EPSG DATASET | PERMITTED CHANGE FOR VENDORS/USERS TO ADOPT                         |
+> |--------------------------|---------------------------------------------------------------------|
+> | *Change of ellipsoid defining parameters.* |                                                                     | |
+> | 1a | Ellipsoid parameters a and b.                                       | a and 1/f ; a and f; a and e; a and e2. |
+> | 1b | Ellipsoid parameters a and 1/f.                                     | a and b; a and f; a and e; a and e2. |
+> | *Change of projection method* |            |
 > | 2a | Lambert Conic Conformal (1 SP) method with projection parameters φO and kO. | Lambert Conic Conformal (2 SP) method with projection parameters φ1 and φ2. |
 > | 2b | Lambert Conic Conformal (2 SP) method with projection parametersφ1 and φ2. | Lambert Conic Conformal (1 SP) method with projection parameters φO and kO. |
-> | 3a | Mercator (variant A) method with projection parameters φO and kO. | Mercator (variant B) method with projection parameter φ1. |
-> | 3b | Mercator (variant B) method with projection parameter φ1. | Mercator (variant A) method with projection parameters φO and kO. |
+> | 3a | Mercator (variant A) method with projection parameters φO and kO.   | Mercator (variant B) method with projection parameter φ1. |
+> | 3b | Mercator (variant B) method with projection parameter φ1.           | Mercator (variant A) method with projection parameters φO and kO. |
 > | 4a | Hotine Oblique Mercator (variant A) method with projection parameters FE and FN. | Hotine Oblique Mercator (variant B) method with projection parameters EC and NC. |
 > | 4b | Hotine Oblique Mercator (variant B) method with projection parameters EC and NC. | Hotine Oblique Mercator (variant A) method with projection parameters FE and FN. |
 > | 5a | Polar Stereographic (Variant A) method with projection parameters φO and kO. | Polar Stereographic (Variant B) method with projection parameter φF. |
@@ -528,13 +528,13 @@ Following software are using [EPSG Geodetic Parameter Dataset Terms of Use](http
 > | 5d | Polar Stereographic (Variant C) method with projection parameters φF, EF and NF. | Polar Stereographic (Variant A) method with projection parameters φO, kO, FE and FN. |
 > | 5e | Polar Stereographic (Variant B) method with projection parameter FE and FN. | Polar Stereographic (Variant C) method with projection parameters EF and NF. |
 > | 5f | Polar Stereographic (Variant C) method with projection parameters EF and NF. | Polar Stereographic (Variant B) method with projection parameter FE and FN. |
-> | Change of transformation method |  |  |
+> | Change of transformation method |           |
 > | 6a | Position Vector 7-parameter transformation method parameters RX RY and RZ. | Coordinate Frame transformation method with signs of position vector parameters RX RY and RZ reversed. |
-> | 6b | Coordinate Frame transformation method parameters RX RY and RZ. | Position Vector 7-parameter transformation method with signs of coordinate frame parameters RX RY and RZ reversed. |
+> | 6b | Coordinate Frame transformation method parameters RX RY and RZ.     | Position Vector 7-parameter transformation method with signs of coordinate frame parameters RX RY and RZ reversed. |
 > | 7 | Concatenated transformation using geocentric methods (Geocentric translations, Position Vector 7-parameter transformation, Coordinate Frame rotation). | Equivalent single geocentric transformation in which for each parameter the parameter values of the component steps have been summed. |
-> | *Change of units* |||
-> | 8 | NTv2 method grid file filename. | NTv2 method grid file relative storage path with file name including removal (if necessary) of “special characters” [spaces, parentheses, etc] which are replaced by underscore characters. |
-> | 9 | Parameter value. | Convert unit to another, for example from microradian to arc-second, using conversion factors obtained from the EPSG dataset Unit table. |
+> | *Change of units* |                       |
+> | 8 | NTv2 method grid file filename.                         | NTv2 method grid file relative storage path with file name including removal (if necessary) of “special characters” [spaces, parentheses, etc] which are replaced by underscore characters. |
+> | 9 | Parameter value.                                       | Convert unit to another, for example from microradian to arc-second, using conversion factors obtained from the EPSG dataset Unit table. |
 
 
 ## MIT ##
